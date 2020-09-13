@@ -7,16 +7,18 @@
 }
 
 body {
-    background-color: var(--color1);
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif; /*TODO change*/
+    background-color: var(--color3);
     color: var(--color4);
-    font-weight: bold;
 }
 
 
 .overall {
-    height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
 }
@@ -26,7 +28,7 @@ body {
     height: 300px;
     margin: 20px;
     background-color: var(--color2);
-
+    cursor: pointer;
     position: relative;
     display: flex;
     justify-content: center;
@@ -41,26 +43,33 @@ body {
 
 .info {
     transition: all 0.5s ease;
-    background-color: rgba(186, 107, 87, 0.8);
+    color: transparent;
     position: absolute;
     bottom: 0px;
     width: 100%;
     height: 0px;
     box-sizing: border-box;
+    padding: 20px;
     
-    z-index: 2;
-    overflow: hidden;
-
+    overflow: hidden;   
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
+
 .container:hover .info {
-    height: 100%;
-    padding: 20px;
+    height: 80%;
+    background-color: rgba(231, 178, 165, 0.8);
+    color: initial;
+}
+
+info > p {
+    display: block;
+    margin: initial 20px initial 20px   ;
 }
 
 p span + span {
     float: right;
 }
+
